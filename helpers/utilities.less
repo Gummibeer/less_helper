@@ -39,17 +39,26 @@
 
 // Text wrapping
 // ========================================================================
-.text-truncate {
-  .text-truncate();
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: normal; /* for IE */
+  white-space: nowrap;
 }
 
-.text-break {
-  .text-break();
+.text-break() {
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
-.text-nowrap {
-  .text-nowrap();
+.text-nowrap() {
+  white-space: nowrap;
 }
+
 
 
 // Text Alignment
@@ -190,16 +199,6 @@
 }
 .font-size-2em {
   font-size: 2em !important;
-}
-
-.font-raleway {
-  font-family: Raleway, sans-serif !important;
-}
-.font-montserrat {
-  font-family: Montserrat, sans-serif !important;
-}
-.font-lato {
-  font-family: Lato, sans-serif !important;
 }
 
 .cursor-pointer {
